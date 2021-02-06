@@ -7,3 +7,10 @@ before_install:
 
 script:
   - docker run rrezon/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region : "us-west-2"
+  app: "docker"
+  env: "prod"
+  bucket_name: ""
